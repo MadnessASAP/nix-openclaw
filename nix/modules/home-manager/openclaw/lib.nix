@@ -1,4 +1,4 @@
-{ config, lib, pkgs }:
+{ config, lib, pkgs, bundledPluginInputs }:
 
 let
   cfg = config.programs.openclaw;
@@ -18,34 +18,15 @@ let
   appPackage = if cfg.appPackage != null then cfg.appPackage else defaultPackage;
   generatedConfigOptions = import ../../../generated/openclaw-config-options.nix { lib = lib; };
 
-  bundledPluginSources = let
-    stepieteRev = "983210e3b6e9285780e87f48ce9354b51a270e95";
-    stepieteNarHash = "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=";
-    stepiete = tool:
-      "github:openclaw/nix-steipete-tools?dir=tools/${tool}&rev=${stepieteRev}&narHash=${stepieteNarHash}";
-  in {
-    summarize = stepiete "summarize";
-    peekaboo = stepiete "peekaboo";
-    oracle = stepiete "oracle";
-    poltergeist = stepiete "poltergeist";
-    sag = stepiete "sag";
-    camsnap = stepiete "camsnap";
-    gogcli = stepiete "gogcli";
-    goplaces = stepiete "goplaces";
-    bird = stepiete "bird";
-    sonoscli = stepiete "sonoscli";
-    imsg = stepiete "imsg";
-  };
-
-  bundledPlugins = lib.filter (p: p != null) (lib.mapAttrsToList (name: source:
+  bundledPlugins = lib.filter (p: p != null) (lib.mapAttrsToList (name: flake:
     let
       pluginCfg = cfg.bundledPlugins.${name};
     in
       if (pluginCfg.enable or false) then {
-        inherit source;
+        inherit flake;
         config = pluginCfg.config or {};
       } else null
-  ) bundledPluginSources);
+  ) bundledPluginInputs);
 
   effectivePlugins = cfg.customPlugins ++ bundledPlugins;
 
@@ -71,7 +52,7 @@ in {
     defaultPackage
     appPackage
     generatedConfigOptions
-    bundledPluginSources
+    bundledPluginInputs
     bundledPlugins
     effectivePlugins
     resolvePath

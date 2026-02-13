@@ -1,4 +1,4 @@
-{ lib, pkgs, stdenv, nodejs_22, openclawGateway }:
+{ lib, pkgs, stdenv, nodejs_22, openclawGateway, openclawModule }:
 
 let
   stubModule = { lib, ... }: {
@@ -53,7 +53,7 @@ let
   moduleEval = lib.evalModules {
     modules = [
       stubModule
-      ../modules/home-manager/openclaw.nix
+      openclawModule
       ({ lib, ... }: {
         config = {
           home.homeDirectory = "/tmp";

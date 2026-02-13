@@ -1,40 +1,23 @@
-{ lib, pkgs, openclawLib, enabledInstances }:
+{ lib, pkgs, openclawLib, enabledInstances, resolvePlugin }:
 
 let
   resolvePath = openclawLib.resolvePath;
   toRelative = openclawLib.toRelative;
 
-  resolvePlugin = plugin: let
-    flake = builtins.getFlake plugin.source;
-    system = pkgs.stdenv.hostPlatform.system;
-    openclawPluginRaw =
-      if flake ? openclawPlugin then flake.openclawPlugin
-      else throw "openclawPlugin missing in ${plugin.source}";
-    openclawPlugin =
-      if builtins.isFunction openclawPluginRaw
-      then openclawPluginRaw system
-      else openclawPluginRaw;
-    resolvedPlugin =
-      if openclawPlugin == null
-      then throw "openclawPlugin is null in ${plugin.source} for ${system}"
-      else openclawPlugin;
-    needs = resolvedPlugin.needs or {};
-  in {
-    source = plugin.source;
-    name = resolvedPlugin.name or (throw "openclawPlugin.name missing in ${plugin.source}");
-    skills = resolvedPlugin.skills or [];
-    packages = resolvedPlugin.packages or [];
-    needs = {
-      stateDirs = needs.stateDirs or [];
-      requiredEnv = needs.requiredEnv or [];
-    };
-    config = plugin.config or {};
-  };
+  system = pkgs.stdenv.hostPlatform.system;
+
+  resolveHMPlugin = plugin:
+    let
+      flake =
+        if plugin ? flake then plugin.flake
+        else builtins.getFlake plugin.source;
+    in
+      resolvePlugin { inherit system; } { inherit flake; config = plugin.config or {}; };
 
   resolvedPluginsByInstance =
     lib.mapAttrs (instName: inst:
       let
-        resolved = map resolvePlugin inst.plugins;
+        resolved = map resolveHMPlugin inst.plugins;
         counts = lib.foldl' (acc: p:
           acc // { "${p.name}" = (acc.${p.name} or 0) + 1; }
         ) {} resolved;

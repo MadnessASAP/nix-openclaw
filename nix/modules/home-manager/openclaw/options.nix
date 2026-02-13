@@ -1,7 +1,9 @@
+{ bundledPluginInputs }:
+
 { config, lib, pkgs, ... }:
 
 let
-  openclawLib = import ./lib.nix { inherit config lib pkgs; };
+  openclawLib = import ./lib.nix { inherit config lib pkgs bundledPluginInputs; };
   instanceModule = import ./options-instance.nix { inherit lib openclawLib; };
   mkSkillOption = lib.types.submodule {
     options = {

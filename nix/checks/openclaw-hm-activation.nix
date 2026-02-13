@@ -1,7 +1,6 @@
-{ pkgs, home-manager }:
+{ pkgs, home-manager, openclawModule }:
 
 let
-  openclawModule = ../modules/home-manager/openclaw.nix;
   testScript = builtins.readFile ../tests/hm-activation.py;
 
 in

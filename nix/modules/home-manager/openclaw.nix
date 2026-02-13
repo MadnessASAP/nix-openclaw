@@ -1,1 +1,3 @@
-import ./openclaw
+{ bundledPluginInputs, resolvePlugin }:
+
+import ./openclaw { inherit bundledPluginInputs resolvePlugin; }
