@@ -14,7 +14,7 @@ let
       source =
         if plugin ? source && plugin.source != null then plugin.source
         else "<flake-input>";
-      resolved = resolvePlugin { inherit system; } { inherit flake; config = plugin.config or {}; };
+      resolved = resolvePlugin { inherit system; } { inherit flake; nameHint = plugin.nameHint or null; config = plugin.config or {}; };
     in
       resolved // { inherit source; };
 

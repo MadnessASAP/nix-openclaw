@@ -13,10 +13,23 @@
     #
     # Returns:
     #   { name, skills, packages, needs.{ stateDirs, requiredEnv }, config }
-    resolvePlugin = { system }: { flake, config ? {} }:
+    resolvePlugin = { system }: { flake, config ? {}, nameHint ? null }:
       let
+        fallbackPlugin =
+          if nameHint != null
+            && flake ? packages
+            && builtins.hasAttr system flake.packages
+            && builtins.hasAttr nameHint flake.packages.${system}
+          then {
+            name = nameHint;
+            skills = [];
+            packages = [ flake.packages.${system}.${nameHint} ];
+            needs = { stateDirs = []; requiredEnv = []; };
+          }
+          else null;
         openclawPluginRaw =
           if flake ? openclawPlugin then flake.openclawPlugin
+          else if fallbackPlugin != null then fallbackPlugin
           else throw "openclawPlugin attribute missing from plugin flake";
         openclawPlugin =
           if builtins.isFunction openclawPluginRaw

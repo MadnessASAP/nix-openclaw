@@ -14,61 +14,26 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-steipete-tools.url = "github:openclaw/nix-steipete-tools";
-
-    bundled-plugin-summarize.url = "github:openclaw/nix-steipete-tools?dir=tools/summarize";
-    bundled-plugin-summarize.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-peekaboo.url = "github:openclaw/nix-steipete-tools?dir=tools/peekaboo";
-    bundled-plugin-peekaboo.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-oracle.url = "github:openclaw/nix-steipete-tools?dir=tools/oracle";
-    bundled-plugin-oracle.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-poltergeist.url = "github:openclaw/nix-steipete-tools?dir=tools/poltergeist";
-    bundled-plugin-poltergeist.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-sag.url = "github:openclaw/nix-steipete-tools?dir=tools/sag";
-    bundled-plugin-sag.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-camsnap.url = "github:openclaw/nix-steipete-tools?dir=tools/camsnap";
-    bundled-plugin-camsnap.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-gogcli.url = "github:openclaw/nix-steipete-tools?dir=tools/gogcli";
-    bundled-plugin-gogcli.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-goplaces.url = "github:openclaw/nix-steipete-tools?dir=tools/goplaces";
-    bundled-plugin-goplaces.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-bird.url = "github:openclaw/nix-steipete-tools?dir=tools/bird";
-    bundled-plugin-bird.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-sonoscli.url = "github:openclaw/nix-steipete-tools?dir=tools/sonoscli";
-    bundled-plugin-sonoscli.inputs.nixpkgs.follows = "nixpkgs";
-    bundled-plugin-imsg.url = "github:openclaw/nix-steipete-tools?dir=tools/imsg";
-    bundled-plugin-imsg.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, flake-utils, home-manager, nix-steipete-tools
-    , bundled-plugin-summarize
-    , bundled-plugin-peekaboo
-    , bundled-plugin-oracle
-    , bundled-plugin-poltergeist
-    , bundled-plugin-sag
-    , bundled-plugin-camsnap
-    , bundled-plugin-gogcli
-    , bundled-plugin-goplaces
-    , bundled-plugin-bird
-    , bundled-plugin-sonoscli
-    , bundled-plugin-imsg
-    }:
+  outputs = { self, nixpkgs, flake-utils, home-manager, nix-steipete-tools }:
     let
       overlay = import ./nix/overlay.nix;
       sourceInfoStable = import ./nix/sources/openclaw-source.nix;
       systems = [ "x86_64-linux" "aarch64-darwin" ];
 
       bundledPluginInputs = {
-        summarize = bundled-plugin-summarize;
-        peekaboo = bundled-plugin-peekaboo;
-        oracle = bundled-plugin-oracle;
-        poltergeist = bundled-plugin-poltergeist;
-        sag = bundled-plugin-sag;
-        camsnap = bundled-plugin-camsnap;
-        gogcli = bundled-plugin-gogcli;
-        goplaces = bundled-plugin-goplaces;
-        bird = bundled-plugin-bird;
-        sonoscli = bundled-plugin-sonoscli;
-        imsg = bundled-plugin-imsg;
+        summarize = nix-steipete-tools;
+        peekaboo = nix-steipete-tools;
+        oracle = nix-steipete-tools;
+        poltergeist = nix-steipete-tools;
+        sag = nix-steipete-tools;
+        camsnap = nix-steipete-tools;
+        gogcli = nix-steipete-tools;
+        goplaces = nix-steipete-tools;
+        bird = nix-steipete-tools;
+        sonoscli = nix-steipete-tools;
+        imsg = nix-steipete-tools;
       };
 
       openclawLib = import ./nix/lib { inherit (nixpkgs) lib; };
@@ -148,7 +113,5 @@
       darwinModules.openclaw = import ./nix/modules/darwin/openclaw.nix {
         hmModule = self.homeManagerModules.openclaw;
       };
-
-      inherit bundledPluginInputs;
     };
 }

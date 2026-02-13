@@ -24,6 +24,7 @@ let
     in
       if (pluginCfg.enable or false) then {
         inherit flake;
+        nameHint = name;
         config = pluginCfg.config or {};
       } else null
   ) bundledPluginInputs);

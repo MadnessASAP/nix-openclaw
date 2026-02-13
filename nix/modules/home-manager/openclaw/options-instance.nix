@@ -79,6 +79,13 @@
             default = {};
             description = "Plugin-specific configuration (env/files/etc).";
           };
+          nameHint = lib.mkOption {
+            type = lib.types.nullOr lib.types.str;
+            default = null;
+            internal = true;
+            description = "Internal plugin name hint for fallback resolution.";
+          };
+
         };
       });
       default = openclawLib.effectivePlugins;
