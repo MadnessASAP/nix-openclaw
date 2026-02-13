@@ -11,8 +11,12 @@ let
       flake =
         if plugin ? flake then plugin.flake
         else builtins.getFlake plugin.source;
+      source =
+        if plugin ? source && plugin.source != null then plugin.source
+        else "<flake-input>";
+      resolved = resolvePlugin { inherit system; } { inherit flake; config = plugin.config or {}; };
     in
-      resolvePlugin { inherit system; } { inherit flake; config = plugin.config or {}; };
+      resolved // { inherit source; };
 
   resolvedPluginsByInstance =
     lib.mapAttrs (instName: inst:
