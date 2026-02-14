@@ -20,12 +20,17 @@
             && flake ? packages
             && builtins.hasAttr system flake.packages
             && builtins.hasAttr nameHint flake.packages.${system}
-          then {
-            name = nameHint;
-            skills = [];
-            packages = [ flake.packages.${system}.${nameHint} ];
-            needs = { stateDirs = []; requiredEnv = []; };
-          }
+          then
+            let
+              pkg = flake.packages.${system}.${nameHint};
+              skillsPath = flake.outPath + "/skills/${nameHint}";
+            in {
+              name = nameHint;
+              # Most tool plugins ship skills in ./skills/<name>. If present, include it.
+              skills = if builtins.pathExists skillsPath then [ skillsPath ] else [];
+              packages = [ pkg ];
+              needs = { stateDirs = []; requiredEnv = []; };
+            }
           else null;
         openclawPluginRaw =
           if flake ? openclawPlugin then flake.openclawPlugin
