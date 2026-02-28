@@ -65,14 +65,27 @@
       type = lib.types.listOf (lib.types.submodule {
         options = {
           source = lib.mkOption {
-            type = lib.types.str;
-            description = "Plugin source pointer (e.g., github:owner/repo or path:/...).";
+            type = lib.types.nullOr lib.types.str;
+            default = null;
+            description = "Plugin source URI (e.g., github:owner/repo or path:/...).  Mutually exclusive with flake.";
+          };
+          flake = lib.mkOption {
+            type = lib.types.nullOr lib.types.raw;
+            default = null;
+            description = "Already-resolved plugin flake input.  Mutually exclusive with source.";
           };
           config = lib.mkOption {
             type = lib.types.attrs;
             default = {};
             description = "Plugin-specific configuration (env/files/etc).";
           };
+          nameHint = lib.mkOption {
+            type = lib.types.nullOr lib.types.str;
+            default = null;
+            internal = true;
+            description = "Internal plugin name hint for fallback resolution.";
+          };
+
         };
       });
       default = openclawLib.effectivePlugins;

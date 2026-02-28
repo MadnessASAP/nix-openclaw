@@ -1,7 +1,9 @@
+{ bundledPluginInputs, resolvePlugin }:
+
 { config, lib, pkgs, ... }:
 
 let
-  openclawLib = import ./lib.nix { inherit config lib pkgs; };
+  openclawLib = import ./lib.nix { inherit config lib pkgs bundledPluginInputs; };
   cfg = openclawLib.cfg;
   homeDir = openclawLib.homeDir;
   appPackage = openclawLib.appPackage;
@@ -38,7 +40,7 @@ let
 
   enabledInstances = lib.filterAttrs (_: inst: inst.enable) instances;
 
-  plugins = import ./plugins.nix { inherit lib pkgs openclawLib enabledInstances; };
+  plugins = import ./plugins.nix { inherit lib pkgs openclawLib enabledInstances resolvePlugin; };
 
   files = import ./files.nix {
     inherit config lib pkgs openclawLib enabledInstances plugins;

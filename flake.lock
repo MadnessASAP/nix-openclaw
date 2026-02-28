@@ -1,5 +1,258 @@
 {
   "nodes": {
+    "bundled-plugin-bird": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_2"
+      },
+      "locked": {
+        "dir": "tools/bird",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/bird",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-camsnap": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_3"
+      },
+      "locked": {
+        "dir": "tools/camsnap",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/camsnap",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-gogcli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_4"
+      },
+      "locked": {
+        "dir": "tools/gogcli",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/gogcli",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-goplaces": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_5"
+      },
+      "locked": {
+        "dir": "tools/goplaces",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/goplaces",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-imsg": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_6"
+      },
+      "locked": {
+        "dir": "tools/imsg",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/imsg",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-oracle": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_7"
+      },
+      "locked": {
+        "dir": "tools/oracle",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/oracle",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-peekaboo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_8"
+      },
+      "locked": {
+        "dir": "tools/peekaboo",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/peekaboo",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-poltergeist": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_9"
+      },
+      "locked": {
+        "dir": "tools/poltergeist",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/poltergeist",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-sag": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_10"
+      },
+      "locked": {
+        "dir": "tools/sag",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/sag",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-sonoscli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_11"
+      },
+      "locked": {
+        "dir": "tools/sonoscli",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/sonoscli",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
+    "bundled-plugin-summarize": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "root": "root_12"
+      },
+      "locked": {
+        "dir": "tools/summarize",
+        "lastModified": 1770240566,
+        "narHash": "sha256-fY8t41kMSHu2ovf89mIdvC7vkceroCwKxw/MKVn4rsE=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "983210e3b6e9285780e87f48ce9354b51a270e95",
+        "type": "github"
+      },
+      "original": {
+        "dir": "tools/summarize",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -40,7 +293,7 @@
     },
     "nix-steipete-tools": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_12"
       },
       "locked": {
         "lastModified": 1770240566,
@@ -72,7 +325,55 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_10": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_11": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_12": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_13": {
       "locked": {
         "lastModified": 1767767207,
         "narHash": "sha256-Mj3d3PfwltLmukFal5i3fFt27L6NiKXdBezC1EBuZs4=",
@@ -88,12 +389,371 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_9": {
+      "locked": {
+        "lastModified": 1767364772,
+        "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16c7794d0a28b5a37904d55bcca36003b9109aaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "bundled-plugin-bird": "bundled-plugin-bird",
+        "bundled-plugin-camsnap": "bundled-plugin-camsnap",
+        "bundled-plugin-gogcli": "bundled-plugin-gogcli",
+        "bundled-plugin-goplaces": "bundled-plugin-goplaces",
+        "bundled-plugin-imsg": "bundled-plugin-imsg",
+        "bundled-plugin-oracle": "bundled-plugin-oracle",
+        "bundled-plugin-peekaboo": "bundled-plugin-peekaboo",
+        "bundled-plugin-poltergeist": "bundled-plugin-poltergeist",
+        "bundled-plugin-sag": "bundled-plugin-sag",
+        "bundled-plugin-sonoscli": "bundled-plugin-sonoscli",
+        "bundled-plugin-summarize": "bundled-plugin-summarize",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "nix-steipete-tools": "nix-steipete-tools",
+        "nixpkgs": "nixpkgs_13"
+      }
+    },
+    "root_10": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_9"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_11": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_10"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_12": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_11"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_3": {
+      "inputs": {
         "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_4": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_5": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1770237944,
+        "narHash": "sha256-nfCSSyNU97XpKVPgo6mODBwrVeTOuMCl3i18QuGjpN0=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "6352c8247b3b889d7f17bce1f09d6c58fd34932c",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-nfCSSyNU97XpKVPgo6mODBwrVeTOuMCl3i18QuGjpN0=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "6352c8247b3b889d7f17bce1f09d6c58fd34932c",
+        "type": "github"
+      }
+    },
+    "root_6": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_7": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_8": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_7"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      }
+    },
+    "root_9": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1769797395,
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
+      },
+      "original": {
+        "narHash": "sha256-QkPl/Rgk9DXgaVNhjvHHHjy5e81j+MzcVOouZRdUTLA=",
+        "owner": "openclaw",
+        "repo": "nix-steipete-tools",
+        "rev": "dbf0a31a57407d9140e32357ea8d0215bd9feed9",
+        "type": "github"
       }
     },
     "systems": {

@@ -13,6 +13,7 @@
 , zstd
 , sourceInfo
 , pnpmDepsHash ? (sourceInfo.pnpmDepsHash or null)
+, openclawModule
 }:
 
 let
@@ -79,7 +80,7 @@ let
   pluginEval = lib.evalModules {
     modules = [
       stubModule
-      ../modules/home-manager/openclaw.nix
+      openclawModule
       ({ lib, options, ... }: {
         config = {
           home.homeDirectory = "/tmp";
